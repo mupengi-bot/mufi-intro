@@ -30,6 +30,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
 }
 .slide.active{opacity:1;transform:translateX(0);pointer-events:auto;z-index:2}
 .slide.prev{opacity:0;transform:translateX(-60px)}
+.slide.next{opacity:0;transform:translateX(60px)}
 .slide-inner{max-width:1200px;width:100%;height:100%;display:flex;align-items:center;gap:60px}
 .slide-inner.center{justify-content:center;flex-direction:column;text-align:center;gap:24px}
 .slide-inner.split{justify-content:space-between}
@@ -1083,15 +1084,20 @@ const slides=document.querySelectorAll('.slide'),
 let cur=0;
 
 function go(n){
-  if(n<0||n>=total)return;
+  if(n<0||n>=total||n===cur)return;
+  const forward=n>cur;
+  // Remove current active
   slides[cur].classList.remove('active');
-  slides[cur].classList.add(n>cur?'prev':'');
+  slides[cur].classList.add(forward?'prev':'next');
+  // Prep target: place it on the correct side instantly
+  slides[n].classList.remove('prev','next','active');
+  slides[n].classList.add(forward?'next':'prev');
+  // Force reflow so the starting position takes effect
+  void slides[n].offsetWidth;
+  // Now animate to active
+  slides[n].classList.remove('prev','next');
+  slides[n].classList.add('active');
   cur=n;
-  slides.forEach((s,i)=>{
-    s.classList.remove('active','prev');
-    if(i===cur)s.classList.add('active');
-    else if(i<cur)s.classList.add('prev');
-  });
   counter.textContent=`${cur+1} / ${total}`;
   prog.style.width=`${((cur+1)/total)*100}%`;
   prevBtn.disabled=cur===0;

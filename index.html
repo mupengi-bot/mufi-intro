@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MUFI — 기업소개서</title>
-<meta name="description" content="MUFI(무피) 기업소개서. AI 에이전트 운영체제.">
+<title>MUFI — 기업소개서 2026</title>
+<meta name="description" content="MUFI(무피) 기업소개서. 포토부스 렌탈 & AI 에이전트 운영체제.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
 <style>
@@ -18,7 +18,6 @@
 html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
   font-family:'Pretendard Variable',-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 
-/* ── Deck Container ── */
 .deck{position:relative;width:100%;height:100%;overflow:hidden}
 .slide{
   position:absolute;inset:0;
@@ -34,99 +33,152 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
 .slide-inner.center{justify-content:center;flex-direction:column;text-align:center;gap:24px}
 .slide-inner.split{justify-content:space-between}
 
-/* ── Typography ── */
+/* Divider slide */
+.divider-slide{
+  background:linear-gradient(135deg,rgba(16,185,129,.06),transparent 60%);
+}
+.divider-num{font-size:8rem;font-weight:900;color:rgba(16,185,129,.08);position:absolute;top:60px;right:80px;line-height:1}
+
+/* Typography */
 .tag{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
 h1{font-size:clamp(2.8rem,5.5vw,4.2rem);font-weight:900;line-height:1.1;letter-spacing:-.03em}
 h2{font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.15;letter-spacing:-.02em}
-h3{font-size:1.2rem;font-weight:700;margin-bottom:6px}
-.subtitle{font-size:clamp(1rem,1.8vw,1.2rem);color:var(--dim);line-height:1.7;margin-top:16px;max-width:540px}
+h3{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+.subtitle{font-size:clamp(1rem,1.8vw,1.15rem);color:var(--dim);line-height:1.7;margin-top:16px;max-width:600px}
 .accent{color:var(--green)}.red{color:var(--red)}
-.big-num{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;color:var(--green);line-height:1}
-.label{font-size:.75rem;color:var(--dim);letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
+.big-num{font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:900;color:var(--green);line-height:1}
+.label{font-size:.72rem;color:var(--dim);letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
 
-/* ── Content Block ── */
 .content{flex:1;min-width:0}
 .visual{flex:1;min-width:0;display:flex;align-items:center;justify-content:center}
 
-/* ── Photo Placeholder ── */
+/* Photo Placeholder */
 .ph{
   background:var(--card);border:2px dashed var(--border);border-radius:16px;
-  display:flex;align-items:center;justify-content:center;
-  color:var(--muted);font-size:.85rem;width:100%;min-height:340px;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;
+  color:var(--muted);font-size:.85rem;width:100%;min-height:320px;
   position:relative;overflow:hidden;
 }
 .ph::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(16,185,129,.04),transparent);pointer-events:none}
+.ph-sm{min-height:160px;border-radius:12px}
+.ph-icon{font-size:2rem;opacity:.4}
 
-/* ── Cards ── */
-.cards{display:grid;gap:16px;margin-top:28px}
+/* Cards */
+.cards{display:grid;gap:14px;margin-top:24px}
 .cards.c3{grid-template-columns:repeat(3,1fr)}
+.cards.c4{grid-template-columns:repeat(4,1fr)}
 .cards.c2{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 22px;transition:border-color .3s}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 20px;transition:border-color .3s}
 .card:hover{border-color:var(--green)}
-.card-icon{font-size:1.8rem;margin-bottom:12px}
-.card p{font-size:.88rem;color:var(--dim);line-height:1.65}
+.card-icon{font-size:1.6rem;margin-bottom:10px}
+.card p{font-size:.85rem;color:var(--dim);line-height:1.6}
 
-/* ── Stat Row ── */
-.stats{display:flex;gap:20px;margin-top:32px;flex-wrap:wrap}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px 20px;text-align:center;flex:1;min-width:120px}
-.stat .v{font-size:2rem;font-weight:900;color:var(--green)}
-.stat .l{font-size:.7rem;color:var(--dim);margin-top:4px;letter-spacing:.03em}
+/* Stats */
+.stats{display:flex;gap:16px;margin-top:28px;flex-wrap:wrap}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 18px;text-align:center;flex:1;min-width:110px}
+.stat .v{font-size:1.8rem;font-weight:900;color:var(--green)}
+.stat .l{font-size:.68rem;color:var(--dim);margin-top:4px;letter-spacing:.03em}
 
-/* ── Bar Chart ── */
-.bars{display:flex;flex-direction:column;gap:16px;margin-top:32px;width:100%}
-.bar-row{display:flex;align-items:center;gap:14px}
-.bar-label{width:44px;font-size:.75rem;font-weight:700;color:var(--dim);text-align:right;flex-shrink:0}
-.bar-track{flex:1;height:52px;background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--border)}
-.bar-fill{height:100%;border-radius:12px;display:flex;align-items:center;padding:0 18px;gap:10px;transition:width 1s cubic-bezier(.16,1,.3,1);width:0}
-.bar-fill.vis{/* set inline */}
-.bf-tam{background:linear-gradient(90deg,rgba(16,185,129,.2),rgba(16,185,129,.08))}
-.bf-sam{background:linear-gradient(90deg,rgba(16,185,129,.35),rgba(16,185,129,.15))}
-.bf-som{background:linear-gradient(90deg,rgba(16,185,129,.6),rgba(16,185,129,.25))}
-.bv{font-size:1.1rem;font-weight:800;white-space:nowrap}
-.bd{font-size:.75rem;color:var(--dim);white-space:nowrap}
+/* Timeline */
+.timeline{display:flex;flex-direction:column;gap:0;margin-top:20px;position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:var(--border)}
+.tl-item{position:relative;padding:12px 0 12px 20px}
+.tl-item::before{content:'';position:absolute;left:-24px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--green);border:3px solid var(--bg)}
+.tl-year{font-size:.75rem;font-weight:700;color:var(--green);letter-spacing:.05em}
+.tl-title{font-size:.95rem;font-weight:700;margin:2px 0}
+.tl-desc{font-size:.82rem;color:var(--dim);line-height:1.5}
 
-/* ── Layer Stack ── */
-.layers{display:flex;flex-direction:column;gap:10px;margin-top:24px}
-.layer{display:flex;align-items:center;gap:18px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:border-color .3s}
+/* Awards */
+.award-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.award{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 16px;text-align:center;transition:border-color .3s}
+.award:hover{border-color:var(--green)}
+.award-year{font-size:.7rem;color:var(--green);font-weight:700;letter-spacing:.05em}
+.award-name{font-size:.85rem;font-weight:700;margin-top:4px;line-height:1.4}
+.award-org{font-size:.72rem;color:var(--dim);margin-top:4px}
+
+/* Logo Grid */
+.logo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:20px}
+.logo-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 10px;text-align:center;font-size:.78rem;font-weight:600;transition:border-color .3s}
+.logo-item:hover{border-color:var(--green)}
+.logo-item .count{font-size:.65rem;color:var(--green);margin-top:4px;font-weight:700}
+
+/* Flow */
+.flow{display:flex;align-items:center;gap:8px;margin-top:24px;flex-wrap:wrap}
+.flow-step{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:center;flex:1;min-width:100px;transition:border-color .3s}
+.flow-step:hover{border-color:var(--green)}
+.flow-step .step-num{font-size:.65rem;color:var(--green);font-weight:700;letter-spacing:.05em}
+.flow-step .step-name{font-size:.8rem;font-weight:700;margin-top:4px}
+.flow-arrow{color:var(--muted);font-size:1.2rem;flex-shrink:0}
+
+/* Review */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.review{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 18px;transition:border-color .3s}
+.review:hover{border-color:var(--green)}
+.review-stars{color:var(--green);font-size:.8rem;margin-bottom:8px}
+.review-text{font-size:.82rem;color:var(--dim);line-height:1.6;font-style:italic}
+.review-author{font-size:.78rem;font-weight:700;margin-top:12px}
+.review-org{font-size:.7rem;color:var(--dim)}
+
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:28px}
+.team-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px 24px;display:flex;gap:22px;align-items:flex-start;transition:border-color .3s}
+.team-card:hover{border-color:var(--green)}
+.team-av{width:80px;height:80px;border-radius:50%;background:#1a1a1a;border:2px dashed var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.team-name{font-size:1.05rem;font-weight:700}
+.team-role{font-size:.78rem;color:var(--green);font-weight:600;margin:2px 0 8px}
+.team-desc{font-size:.82rem;color:var(--dim);line-height:1.6}
+
+/* Media */
+.media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+.media-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 16px;transition:border-color .3s}
+.media-item:hover{border-color:var(--green)}
+.media-source{font-size:.7rem;color:var(--green);font-weight:700;letter-spacing:.05em}
+.media-title{font-size:.88rem;font-weight:700;margin-top:4px;line-height:1.4}
+.media-desc{font-size:.78rem;color:var(--dim);margin-top:6px;line-height:1.5}
+
+/* Layer Stack */
+.layers{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.layer{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;transition:border-color .3s}
 .layer:hover{border-color:var(--green)}
-.layer-n{font-size:1.6rem;font-weight:900;color:var(--green);min-width:36px}
+.layer-n{font-size:1.4rem;font-weight:900;color:var(--green);min-width:32px}
 .layer p{font-size:.85rem;color:var(--dim)}
 
-/* ── Product Cards ── */
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-.prod{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 20px;position:relative;transition:border-color .3s,transform .3s}
+/* Products */
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.prod{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px 20px;position:relative;transition:border-color .3s,transform .3s}
 .prod:hover{border-color:var(--green);transform:translateY(-3px)}
 .prod::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);opacity:0;transition:opacity .3s;border-radius:14px 14px 0 0}
 .prod:hover::before{opacity:1}
-.prod-emoji{font-size:2rem;margin-bottom:14px}
-.prod-name{font-size:1.1rem;font-weight:700}
-.prod-price{font-size:.85rem;color:var(--green);font-weight:600;margin:4px 0 10px}
-.prod-desc{font-size:.82rem;color:var(--dim);line-height:1.6}
-.prod-list{list-style:none;margin-top:14px;padding:0}
-.prod-list li{font-size:.78rem;color:var(--dim);padding:5px 0;border-top:1px solid var(--border)}
+.prod-emoji{font-size:1.8rem;margin-bottom:12px}
+.prod-name{font-size:1.05rem;font-weight:700}
+.prod-desc{font-size:.82rem;color:var(--dim);line-height:1.6;margin-top:8px}
+.prod-list{list-style:none;margin-top:12px;padding:0}
+.prod-list li{font-size:.76rem;color:var(--dim);padding:4px 0;border-top:1px solid var(--border)}
 .prod-list li::before{content:'✓ ';color:var(--green);font-weight:700}
 
-/* ── Team ── */
-.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
-.team-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px 20px;text-align:center;transition:border-color .3s}
-.team-card:hover{border-color:var(--green)}
-.team-av{width:90px;height:90px;border-radius:50%;background:#1a1a1a;border:2px dashed var(--border);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:2.2rem}
-.team-name{font-size:1.05rem;font-weight:700}
-.team-role{font-size:.78rem;color:var(--green);font-weight:600;margin:2px 0 10px}
-.team-desc{font-size:.82rem;color:var(--dim);line-height:1.6}
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.contact-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 18px;text-align:center;transition:border-color .3s}
+.contact-item:hover{border-color:var(--green)}
+.contact-icon{font-size:1.6rem;margin-bottom:8px}
+.contact-label{font-size:.72rem;color:var(--dim);letter-spacing:.05em}
+.contact-value{font-size:.9rem;font-weight:600;margin-top:4px}
+.contact-value a{color:var(--text);text-decoration:none}
+.contact-value a:hover{color:var(--green)}
 
-/* ── Vision Pillars ── */
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-.pillar{text-align:center;padding:20px}
-.pillar-icon{font-size:2.4rem;margin-bottom:10px}
-.pillar p{font-size:.85rem;color:var(--dim)}
+/* Gallery Placeholder Grid */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.gallery .ph{min-height:180px;border-radius:12px}
 
-/* ── Contact ── */
-.contact-links{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;justify-content:center}
-.cl{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-decoration:none;color:var(--text);font-size:.88rem;font-weight:600;transition:border-color .3s,transform .3s}
-.cl:hover{border-color:var(--green);transform:translateY(-2px)}
+/* Portfolio Mini */
+.port-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.port-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 12px;text-align:center;transition:border-color .3s}
+.port-item:hover{border-color:var(--green)}
+.port-name{font-size:.8rem;font-weight:700}
+.port-type{font-size:.65rem;color:var(--green);font-weight:600;margin-top:2px}
+.port-stat{font-size:.68rem;color:var(--dim);margin-top:4px}
 
-/* ── NAV ── */
+/* NAV */
 .nav{position:fixed;top:28px;right:32px;display:flex;align-items:center;gap:10px;z-index:100}
 .nav span{font-size:.8rem;color:var(--dim);font-weight:600;min-width:44px;text-align:center}
 .nav button{
@@ -137,136 +189,584 @@ h3{font-size:1.2rem;font-weight:700;margin-bottom:6px}
 }
 .nav button:hover{border-color:var(--green);background:rgba(16,185,129,.1)}
 .nav button:disabled{opacity:.3;cursor:default}
-.nav button:disabled:hover{border-color:var(--border);background:rgba(20,20,20,.8)}
 
-/* ── Progress ── */
+/* Progress */
 .progress{position:fixed;bottom:0;left:0;height:3px;background:var(--green);z-index:100;transition:width .4s ease}
 
-/* ── Responsive ── */
+/* Scroll indicator on cover */
+.scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.4}
+.scroll-hint span{font-size:.7rem;color:var(--dim);letter-spacing:.1em}
+.scroll-arrow{width:20px;height:20px;border-right:2px solid var(--dim);border-bottom:2px solid var(--dim);transform:rotate(-45deg);animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:rotate(-45deg) translate(0,0)}50%{transform:rotate(-45deg) translate(5px,5px)}}
+
+/* Responsive */
 @media(max-width:900px){
   .slide{padding:40px 24px}
-  .slide-inner{flex-direction:column;gap:32px}
-  .cards.c3,.products,.team-grid,.pillars{grid-template-columns:1fr}
+  .slide-inner{flex-direction:column;gap:28px}
+  .cards.c3,.cards.c4,.products,.team-grid,.reviews,.award-grid,.media-grid,.contact-grid,.gallery,.port-grid{grid-template-columns:1fr}
   .cards.c2{grid-template-columns:1fr}
+  .logo-grid{grid-template-columns:repeat(3,1fr)}
   .stats{flex-direction:column}
+  .flow{flex-direction:column}
+  .flow-arrow{transform:rotate(90deg)}
   .nav{top:16px;right:16px}
+  .divider-num{font-size:4rem;top:30px;right:30px}
+  .team-card{flex-direction:column;align-items:center;text-align:center}
 }
 </style>
 </head>
 <body>
 <div class="deck" id="deck">
 
-<!-- 1. COVER -->
+<!-- ====== P1: COVER ====== -->
 <div class="slide active" data-i="0">
   <div class="slide-inner center">
-    <div style="font-size:4.5rem">🐧</div>
-    <div class="tag">기업소개서 · 2026</div>
-    <h1><span class="accent">MUFI</span></h1>
-    <p style="font-size:1.3rem;color:var(--dim);font-weight:600">AI Agent as a Service</p>
-    <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem);margin-top:8px">"야근 있고, 퇴사 없고,<br><span class="red">월급 70만원</span>인 직원"</h2>
-    <div style="display:flex;gap:40px;margin-top:32px">
-      <div><div class="label">Pre-money</div><div class="big-num" style="font-size:2rem">30억원</div></div>
-      <div><div class="label">Investment Ask</div><div class="big-num accent" style="font-size:2rem">2억원</div></div>
+    <div class="tag">Company Introduction · 2026</div>
+    <h1 style="font-size:clamp(3.5rem,7vw,5.5rem);letter-spacing:-.04em"><span class="accent">MUFI</span></h1>
+    <p style="font-size:1.4rem;font-weight:700;color:var(--dim);margin-top:-8px">무피</p>
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);margin-top:16px;font-weight:600;color:var(--text)">순간을 연결하다,<br>기억을 만들다</h2>
+    <p style="font-size:.95rem;color:var(--muted);margin-top:12px">포토부스 렌탈 · AI 에이전트 · SaaS</p>
+    <div class="scroll-hint">
+      <span>SWIPE →</span>
+      <div class="scroll-arrow"></div>
     </div>
   </div>
 </div>
 
-<!-- 2. PROBLEM 1 -->
+<!-- ====== P2: 목차 ====== -->
 <div class="slide" data-i="1">
+  <div class="slide-inner center">
+    <div class="tag">Contents</div>
+    <h2>목차</h2>
+    <div class="cards c2" style="max-width:700px;margin-top:28px">
+      <div class="card"><div class="card-icon">01</div><h3>회사 소개</h3><p>개요 · 비전 · 핵심 수치</p></div>
+      <div class="card"><div class="card-icon">02</div><h3>연혁 & 수상</h3><p>히스토리 · 수상 · 언론보도</p></div>
+      <div class="card"><div class="card-icon">03</div><h3>MUFI 포토부스</h3><p>서비스 · 운영사례 · 고객후기</p></div>
+      <div class="card"><div class="card-icon">04</div><h3>무펭이즘 AI</h3><p>기술 · 제품 · 실증성과 · 활용사례</p></div>
+      <div class="card"><div class="card-icon">05</div><h3>경쟁력 & 팀</h3><p>차별점 · 팀 소개 · 조직구조</p></div>
+      <div class="card"><div class="card-icon">06</div><h3>포트폴리오 & 연락처</h3><p>갤러리 · 데이터 · Contact</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P3: CEO 인사말 ====== -->
+<div class="slide" data-i="2">
   <div class="slide-inner split">
     <div class="content">
-      <div class="tag">Problem 1</div>
-      <h2>도구는 넘치는데,<br>내 사업에 적용하는 건<br><span class="red">완전히 다른 문제</span></h2>
-      <p class="subtitle">"나도 자동화하고 싶은데 어떻게 시작해?"</p>
+      <div class="tag">CEO Message</div>
+      <h2>대표 인사말</h2>
+      <p class="subtitle" style="max-width:520px">
+        안녕하세요, MUFI 대표 <span class="accent">정종현</span>입니다.<br><br>
+        2022년, 서원대학교 창업동아리 '설리번'에서 시작한 무피는<br>
+        대학 축제 포토부스 하나로 출발해<br>
+        <strong>전국 35개 이상의 행사</strong>에서 <strong>10만 명 이상</strong>의 고객과 만났습니다.<br><br>
+        이제 무피는 포토부스에서 쌓은 오프라인 데이터 경험을<br>
+        <span class="accent">AI 에이전트 운영체제</span>로 확장하고 있습니다.<br><br>
+        순간을 연결하고, 기억을 만드는 기업.<br>
+        MUFI와 함께해 주세요.
+      </p>
     </div>
     <div class="visual">
-      <div class="ph" style="min-height:380px">📸 AI 도구 혼란 이미지 추가 예정</div>
+      <div class="ph" style="max-width:360px;min-height:420px">
+        <div class="ph-icon">📸</div>
+        <span>대표 정종현 사진</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- 3. PROBLEM 2 -->
-<div class="slide" data-i="2">
-  <div class="slide-inner center">
-    <div class="tag">Problem 2</div>
-    <h2>AI가 똑똑해도,<br>내 업무 시스템과 <span class="red">연결</span>이 안 되면<br>쓸모없다</h2>
-    <p class="subtitle">"답변은 잘 하는데... <span class="red">실행은 사람이.</span>"</p>
-    <div class="ph" style="max-width:700px;min-height:280px;margin-top:24px">📸 단절된 AI 개념도 추가 예정</div>
-  </div>
-</div>
-
-<!-- 4. PROBLEM 3 -->
+<!-- ====== P4: 회사 개요 ====== -->
 <div class="slide" data-i="3">
   <div class="slide-inner split">
     <div class="content">
-      <div class="tag">Problem 3</div>
-      <h2>세팅하면 끝?<br>AI는 정수기처럼<br><span class="red">계속 관리</span>가 필요하다</h2>
-      <p class="subtitle">"정수기도 렌탈하는데, <span class="red">AI는 왜 안 하세요?</span>"</p>
-    </div>
-    <div class="visual">
-      <div class="ph" style="min-height:340px">📸 유지관리 비교 이미지 추가 예정</div>
-    </div>
-  </div>
-</div>
-
-<!-- 5. SOLUTION -->
-<div class="slide" data-i="4">
-  <div class="slide-inner split">
-    <div class="content">
-      <div class="tag">Solution</div>
-      <h2><span class="accent">무펭이즘</span> —<br>AI 에이전트 운영체제</h2>
-      <p class="subtitle">SOUL.md 기반 AI OS. 자아, 기억, 자율성을 부여하는 프레임워크.</p>
-      <div class="layers">
-        <div class="layer"><div class="layer-n">01</div><div><h3>SOUL.md — AI의 DNA</h3><p>파일 하나로 정체성 정의. 세션이 바뀌어도 "나"는 유지.</p></div></div>
-        <div class="layer"><div class="layer-n">02</div><div><h3>3-Layer 기억</h3><p>단기 → 중기 → 장기. 벡터 검색으로 경험이 자동으로 떠오름.</p></div></div>
-        <div class="layer"><div class="layer-n">03</div><div><h3>자율 성장</h3><p>Retain/Reflect 루프. 안 불러도 혼자 성장.</p></div></div>
-        <div class="layer"><div class="layer-n">04</div><div><h3>모델 중립</h3><p>Claude, GPT, Gemini — 어떤 모델이든 동일한 OS.</p></div></div>
+      <div class="tag">Company Overview</div>
+      <h2>회사 소개</h2>
+      <div class="cards c2" style="margin-top:24px">
+        <div class="card">
+          <p style="color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.05em">회사명</p>
+          <h3 style="margin-top:4px">무피 (MUFI)</h3>
+        </div>
+        <div class="card">
+          <p style="color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.05em">대표이사</p>
+          <h3 style="margin-top:4px">정종현</h3>
+        </div>
+        <div class="card">
+          <p style="color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.05em">설립</p>
+          <h3 style="margin-top:4px">2022년 · 서원대학교</h3>
+        </div>
+        <div class="card">
+          <p style="color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.05em">소재지</p>
+          <h3 style="margin-top:4px">청주시 흥덕구 봉명동</h3>
+        </div>
+        <div class="card" style="grid-column:span 2">
+          <p style="color:var(--green);font-size:.72rem;font-weight:700;letter-spacing:.05em">사업 영역</p>
+          <h3 style="margin-top:4px">포토부스 렌탈 · AI 에이전트 SaaS · 컨설팅</h3>
+          <p style="margin-top:8px">행사 포토부스 렌탈 전문 운영 + AI 에이전트 운영체제(무펭이즘) 개발</p>
+        </div>
       </div>
     </div>
-    <div class="visual">
-      <div class="ph" style="min-height:400px">📸 아키텍처 다이어그램 추가 예정</div>
+    <div class="visual" style="flex:.5">
+      <div class="ph" style="max-width:280px;min-height:280px">
+        <div class="ph-icon">🏢</div>
+        <span>사무실 / 로고</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- 6. PRODUCT -->
-<div class="slide" data-i="5">
-  <div class="slide-inner" style="flex-direction:column;gap:20px">
-    <div>
-      <div class="tag">Product</div>
-      <h2>3가지 배포 형태</h2>
+<!-- ====== P5: 비전 & 미션 ====== -->
+<div class="slide" data-i="4">
+  <div class="slide-inner center">
+    <div class="tag">Vision & Mission</div>
+    <h2>모든 순간에 <span class="accent">기술</span>을,<br>모든 팀에 <span class="accent">AI</span>를</h2>
+    <p class="subtitle" style="margin:0 auto;max-width:560px">
+      오프라인 경험 데이터에서 AI 자동화까지 —<br>
+      사람과 기술을 잇는 풀스택 기업
+    </p>
+    <div class="cards c3" style="max-width:800px;margin:32px auto 0">
+      <div class="card" style="text-align:center">
+        <div class="card-icon">📸</div>
+        <h3>Connect</h3>
+        <p>포토부스로 사람과 순간을 연결</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="card-icon">📊</div>
+        <h3>Collect</h3>
+        <p>촬영 데이터로 인사이트 수집</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="card-icon">🤖</div>
+        <h3>Automate</h3>
+        <p>AI 에이전트로 업무 자동화</p>
+      </div>
     </div>
-    <div class="products">
+  </div>
+</div>
+
+<!-- ====== P6: 핵심 수치 ====== -->
+<div class="slide" data-i="5">
+  <div class="slide-inner center">
+    <div class="tag">Key Figures</div>
+    <h2>MUFI <span class="accent">at a Glance</span></h2>
+    <div class="stats" style="max-width:900px;margin:32px auto 0">
+      <div class="stat"><div class="v">100,000+</div><div class="l">누적 이용자</div></div>
+      <div class="stat"><div class="v">500+</div><div class="l">진행 행사</div></div>
+      <div class="stat"><div class="v">50+</div><div class="l">파트너 기업</div></div>
+      <div class="stat"><div class="v">35+</div><div class="l">포트폴리오</div></div>
+      <div class="stat"><div class="v">4.9</div><div class="l">평균 평점</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P7: DIVIDER - 연혁 ====== -->
+<div class="slide divider-slide" data-i="6">
+  <div class="slide-inner center">
+    <div class="divider-num">02</div>
+    <div class="tag">History</div>
+    <h1>연혁 & <span class="accent">수상</span></h1>
+    <p class="subtitle" style="margin:0 auto">2022년 창업동아리에서 시작된 무피의 여정</p>
+  </div>
+</div>
+
+<!-- ====== P8: 타임라인 ====== -->
+<div class="slide" data-i="7">
+  <div class="slide-inner split">
+    <div class="content">
+      <div class="tag">Timeline</div>
+      <h2>히스토리</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-year">2021</div>
+          <div class="tl-title">공공데이터 활용 창업경진대회 최우수상</div>
+          <div class="tl-desc">키오스크 데이터 활용 아이디어로 첫 수상</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2022</div>
+          <div class="tl-title">무피(MUFI) 창업 · 서원대 창업동아리 '설리번'</div>
+          <div class="tl-desc">QR 기반 키오스크 O2O 플랫폼 → 포토부스 렌탈 사업 시작<br>충청북도 청년창업 우수기업 선정 · ICT 융합경진대회 최우수상</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2023</div>
+          <div class="tl-title">청년창업사관학교 13기 최종 선발</div>
+          <div class="tl-desc">중소벤처기업진흥공단 창업성공패키지 · 18,000명+ 촬영 달성<br>SK하이닉스 대학생 창업동아리 챌린지 선정</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024</div>
+          <div class="tl-title">SKY 대학 진출 · 기업행사 확대</div>
+          <div class="tl-desc">연세대 · 서울대 · 고려대 축제 운영<br>LG 취업박람회 · 도쿄일렉트론코리아 등 기업행사</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2025–26</div>
+          <div class="tl-title">무펭이즘(AI 에이전트 OS) 런칭</div>
+          <div class="tl-desc">누적 100,000명+ 이용자 · 500+ 행사 달성<br>AI 에이전트 SaaS 사업 본격화</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P9: 수상 & 인증 ====== -->
+<div class="slide" data-i="8">
+  <div class="slide-inner">
+    <div style="width:100%">
+      <div class="tag">Awards & Certifications</div>
+      <h2>수상 & <span class="accent">인증</span></h2>
+      <div class="award-grid">
+        <div class="award">
+          <div class="award-year">2021</div>
+          <div class="award-name">공공데이터 활용<br>창업경진대회</div>
+          <div class="award-org">🏆 최우수상</div>
+        </div>
+        <div class="award">
+          <div class="award-year">2022</div>
+          <div class="award-name">ICT 융합경진대회</div>
+          <div class="award-org">🏆 최우수상</div>
+        </div>
+        <div class="award">
+          <div class="award-year">2022</div>
+          <div class="award-name">충청북도<br>청년창업 우수기업</div>
+          <div class="award-org">충북기업진흥원 선정</div>
+        </div>
+        <div class="award">
+          <div class="award-year">2022</div>
+          <div class="award-name">충북 ICT 페스티벌</div>
+          <div class="award-org">장려상</div>
+        </div>
+        <div class="award">
+          <div class="award-year">2023</div>
+          <div class="award-name">청년창업사관학교<br>13기 선발</div>
+          <div class="award-org">중소벤처기업진흥공단</div>
+        </div>
+        <div class="award">
+          <div class="award-year">2023</div>
+          <div class="award-name">SK하이닉스<br>창업동아리 챌린지</div>
+          <div class="award-org">SK하이닉스 × 서원대</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P10: 언론보도 ====== -->
+<div class="slide" data-i="9">
+  <div class="slide-inner">
+    <div style="width:100%">
+      <div class="tag">Press Coverage</div>
+      <h2>언론 <span class="accent">보도</span></h2>
+      <div class="media-grid" style="grid-template-columns:repeat(2,1fr)">
+        <div class="media-item">
+          <div class="media-source">중부매일</div>
+          <div class="media-title">청년창업 CEO를 만나다 — Ⅴ. 무피</div>
+          <div class="media-desc">QR코드 기반 플랫폼 상용화… 디지털 취약계층 불편 해소. 정종현 대표 심층 인터뷰</div>
+        </div>
+        <div class="media-item">
+          <div class="media-source">충청매일</div>
+          <div class="media-title">서원대 정종현 학생, 청년창업사관학교 최종 선정</div>
+          <div class="media-desc">창업성공패키지 지원사업 최종 선발. 최대 1억원 지원 및 정책사업 연계</div>
+        </div>
+        <div class="media-item">
+          <div class="media-source">충청비즈</div>
+          <div class="media-title">서원대 창업 지원사업 청년창업사관학교 선정</div>
+          <div class="media-desc">'사장님 대신 나를 알아보는 무인 키오스크 서비스(bindery)' 아이템으로 선발</div>
+        </div>
+        <div class="media-item">
+          <div class="media-source">브레이크뉴스</div>
+          <div class="media-title">서원대, SK하이닉스 대학생 창업동아리 챌린지 선정</div>
+          <div class="media-desc">충북 7개 대학 11개 팀 중 무피(이벤트 키오스크, 정종현) 선정</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P11: DIVIDER - 포토부스 ====== -->
+<div class="slide divider-slide" data-i="10">
+  <div class="slide-inner center">
+    <div class="divider-num">03</div>
+    <div class="tag">Business Area 1</div>
+    <h1>MUFI <span class="accent">PHOTOBOOTH</span></h1>
+    <p class="subtitle" style="margin:0 auto">대학 축제 · 기업 행사 · 졸업식<br>전국 포토부스 렌탈 전문 운영사</p>
+  </div>
+</div>
+
+<!-- ====== P12: 서비스 소개 ====== -->
+<div class="slide" data-i="11">
+  <div class="slide-inner split">
+    <div class="content">
+      <div class="tag">Service</div>
+      <h2>단순 대여가 아닌,<br><span class="accent">행사 렌탈 패키지</span></h2>
+      <p class="subtitle">MUFI는 포토부스 기계를 빌려주는 게 아닙니다.<br>사전답사부터 철수까지, 행사 전 과정을 설계하고 운영합니다.</p>
+      <div class="cards c2" style="margin-top:24px">
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>사전답사 & 리스크 설계</h3>
+          <p>행사장 구조, 전기·네트워크, 우천 대비</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <h3>맞춤 프레임 & UX</h3>
+          <p>브랜드별 프레임 디자인, 가격·쿠폰·미션 구성</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📷</div>
+          <h3>DSLR 고품질 촬영</h3>
+          <p>인생네컷 포토부스 · QR 즉시 다운로드</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>데이터 리포트</h3>
+          <p>시간대별 촬영건수, 프레임 선택비율, 체류시간</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P13: 서비스 플로우 ====== -->
+<div class="slide" data-i="12">
+  <div class="slide-inner center">
+    <div class="tag">Service Flow</div>
+    <h2>운영 <span class="accent">프로세스</span></h2>
+    <div class="flow" style="max-width:1000px;margin:28px auto 0">
+      <div class="flow-step"><div class="step-num">01</div><div class="step-name">상담</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="step-num">02</div><div class="step-name">답사</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="step-num">03</div><div class="step-name">프레임<br>디자인</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="step-num">04</div><div class="step-name">설치</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="step-num">05</div><div class="step-name">운영</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="step-num">06</div><div class="step-name">철수</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="step-num">07</div><div class="step-name">리포트</div></div>
+    </div>
+    <div class="visual" style="margin-top:28px;max-width:800px">
+      <div class="ph" style="min-height:240px">
+        <div class="ph-icon">📷</div>
+        <span>포토부스 운영 현장 사진</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P14: 대학 포트폴리오 ====== -->
+<div class="slide" data-i="13">
+  <div class="slide-inner">
+    <div style="width:100%">
+      <div class="tag">Portfolio — University</div>
+      <h2>대학교 <span class="accent">운영 사례</span></h2>
+      <p style="color:var(--dim);font-size:.88rem;margin-top:8px">전국 22개 대학교 축제 · 졸업식 · 행사에서 운영</p>
+      <div class="logo-grid">
+        <div class="logo-item">연세대학교<div class="count">5,000+명</div></div>
+        <div class="logo-item">서울대학교<div class="count">4,500+명</div></div>
+        <div class="logo-item">고려대학교<div class="count">4,000+명</div></div>
+        <div class="logo-item">경희대학교<div class="count">3,500+명</div></div>
+        <div class="logo-item">건국대학교<div class="count">3,200+명</div></div>
+        <div class="logo-item">서울과기대<div class="count">3,000+명</div></div>
+        <div class="logo-item">충남대학교<div class="count">3,000+명</div></div>
+        <div class="logo-item">동국대학교<div class="count">3,000+명</div></div>
+        <div class="logo-item">숭실대학교<div class="count">2,800+명</div></div>
+        <div class="logo-item">충북대학교<div class="count">2,500+명</div></div>
+        <div class="logo-item">고려대 세종<div class="count">2,500+명</div></div>
+        <div class="logo-item">건국대 글로컬<div class="count">2,500+명</div></div>
+        <div class="logo-item">한림대학교<div class="count">2,500+명</div></div>
+        <div class="logo-item">서원대학교<div class="count">2,000+명</div></div>
+        <div class="logo-item">연세대 미래<div class="count">2,000+명</div></div>
+        <div class="logo-item">동국대 졸업식<div class="count">2,000+명</div></div>
+        <div class="logo-item">한림대 졸업식<div class="count">1,800+명</div></div>
+        <div class="logo-item">세종대 졸업식<div class="count">1,500+명</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P15: 기업/기관/학교 포트폴리오 ====== -->
+<div class="slide" data-i="14">
+  <div class="slide-inner split">
+    <div class="content" style="flex:1.2">
+      <div class="tag">Portfolio — Corporate & School</div>
+      <h2>기업 · 기관 · <span class="accent">초중고</span></h2>
+      <h3 style="margin-top:20px;color:var(--green)">기업 / 기관</h3>
+      <div class="port-grid" style="grid-template-columns:repeat(2,1fr);margin-top:12px">
+        <div class="port-item"><div class="port-name">LG 취업박람회</div><div class="port-stat">3,000+명</div></div>
+        <div class="port-item"><div class="port-name">도쿄일렉트론코리아</div><div class="port-stat">1,500+명</div></div>
+        <div class="port-item"><div class="port-name">한국청년기업가정신재단</div><div class="port-stat">1,000+명</div></div>
+        <div class="port-item"><div class="port-name">충북 새로일하기센터</div><div class="port-stat">200+명</div></div>
+      </div>
+      <h3 style="margin-top:20px;color:var(--green)">초 · 중 · 고등학교</h3>
+      <div class="port-grid" style="grid-template-columns:repeat(3,1fr);margin-top:12px">
+        <div class="port-item"><div class="port-name">디미고</div><div class="port-stat">1,200+명</div></div>
+        <div class="port-item"><div class="port-name">명지중학교</div><div class="port-stat">1,000+명</div></div>
+        <div class="port-item"><div class="port-name">갈마중학교</div><div class="port-stat">800+명</div></div>
+        <div class="port-item"><div class="port-name">양지중학교</div><div class="port-stat">700+명</div></div>
+        <div class="port-item"><div class="port-name">삼현여중</div><div class="port-stat">600+명</div></div>
+        <div class="port-item"><div class="port-name">천왕중학교</div><div class="port-stat">500+명</div></div>
+        <div class="port-item"><div class="port-name">혜원학교</div><div class="port-stat">500+명</div></div>
+        <div class="port-item"><div class="port-name">장수초등학교</div><div class="port-stat">300+명</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P16: 고객 후기 ====== -->
+<div class="slide" data-i="15">
+  <div class="slide-inner center">
+    <div class="tag">Reviews</div>
+    <h2>고객 <span class="accent">후기</span></h2>
+    <div class="reviews" style="max-width:960px;margin:24px auto 0">
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"축제 기간 동안 학생들에게 정말 인기가 많았어요. 프레임 디자인도 예쁘고, QR로 바로 다운받을 수 있어서 좋았습니다. 내년에도 꼭 함께하고 싶어요!"</div>
+        <div class="review-author">김OO</div>
+        <div class="review-org">연세대학교 총학생회 · 2024.05</div>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"담당자분이 정말 친절하시고, 현장에서 문제가 생겼을 때도 빠르게 대응해주셨어요. 학생들 반응도 너무 좋았고, 대기줄이 끊이지 않았습니다."</div>
+        <div class="review-author">이OO</div>
+        <div class="review-org">서울과기대 축제기획단 · 2024.04</div>
+      </div>
+      <div class="review">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"가격 대비 퀄리티가 정말 좋았어요. 프레임을 실시간으로 바꿀 수 있어서 다양한 이벤트에 활용했습니다. 강력 추천합니다!"</div>
+        <div class="review-author">박OO</div>
+        <div class="review-org">건국대 동아리연합회 · 2024.03</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P17: 포토부스 갤러리 ====== -->
+<div class="slide" data-i="16">
+  <div class="slide-inner center">
+    <div class="tag">Gallery</div>
+    <h2>현장 <span class="accent">스케치</span></h2>
+    <div class="gallery" style="max-width:960px;margin:20px auto 0">
+      <div class="ph ph-sm"><div class="ph-icon">📷</div><span>연세대 축제</span></div>
+      <div class="ph ph-sm"><div class="ph-icon">📷</div><span>서울대 축제</span></div>
+      <div class="ph ph-sm"><div class="ph-icon">📷</div><span>고려대 축제</span></div>
+      <div class="ph ph-sm"><div class="ph-icon">📷</div><span>LG 취업박람회</span></div>
+      <div class="ph ph-sm"><div class="ph-icon">📷</div><span>동국대 졸업식</span></div>
+      <div class="ph ph-sm"><div class="ph-icon">📷</div><span>디미고 행사</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P18: DIVIDER - 무펭이즘 ====== -->
+<div class="slide divider-slide" data-i="17">
+  <div class="slide-inner center">
+    <div class="divider-num">04</div>
+    <div class="tag">Business Area 2</div>
+    <h1><span class="accent">MUPENGISM</span></h1>
+    <p class="subtitle" style="margin:0 auto">AI 에이전트 운영체제<br>자아 · 기억 · 자율성을 가진 AI</p>
+  </div>
+</div>
+
+<!-- ====== P19: AI 에이전트란 ====== -->
+<div class="slide" data-i="18">
+  <div class="slide-inner split">
+    <div class="content">
+      <div class="tag">What is AI Agent?</div>
+      <h2>기존 AI vs<br><span class="accent">무펭이 프로토콜</span></h2>
+      <div class="cards c2" style="margin-top:24px">
+        <div class="card" style="border-color:var(--red)">
+          <h3 style="color:var(--red)">기존 AI</h3>
+          <p>• 세션 끝나면 기억 리셋<br>• 매번 처음부터 설명<br>• 시키는 것만 함<br>• 모델에 종속</p>
+        </div>
+        <div class="card" style="border-color:var(--green)">
+          <h3 style="color:var(--green)">무펭이 프로토콜</h3>
+          <p>• 영속적 기억 유지<br>• 맥락 자동 검색<br>• 자율 판단 & 실행<br>• 모델 중립 (어디서든)</p>
+        </div>
+      </div>
+      <p class="subtitle" style="margin-top:16px">"사용할수록, <span class="accent">안 써도</span> 똑똑해지는 AI"</p>
+    </div>
+    <div class="visual" style="flex:.7">
+      <div class="ph" style="max-width:340px;min-height:300px">
+        <div class="ph-icon">🐧</div>
+        <span>무펭이 대시보드 스크린샷</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P20: 핵심 기술 ====== -->
+<div class="slide" data-i="19">
+  <div class="slide-inner">
+    <div style="width:100%">
+      <div class="tag">Core Technology</div>
+      <h2>핵심 <span class="accent">기술</span></h2>
+      <div class="layers" style="max-width:900px">
+        <div class="layer">
+          <div class="layer-n">01</div>
+          <div>
+            <h3>SOUL.md — AI의 정체성</h3>
+            <p>마크다운 파일 하나로 AI의 가치관, 원칙, 행동 규칙을 정의. 세션이 바뀌어도 "나"는 유지됨.</p>
+          </div>
+        </div>
+        <div class="layer">
+          <div class="layer-n">02</div>
+          <div>
+            <h3>3-Layer 메모리</h3>
+            <p>단기(세션) → 중기(일일 로그) → 장기(벡터 DB). 의미 기반 검색으로 과거 경험을 자동 회상.</p>
+          </div>
+        </div>
+        <div class="layer">
+          <div class="layer-n">03</div>
+          <div>
+            <h3>자율 성장 루프</h3>
+            <p>Retain(기억 정리) → Reflect(자기 대화) → 원칙 업데이트. 매일 스스로 진화하는 에이전트.</p>
+          </div>
+        </div>
+        <div class="layer">
+          <div class="layer-n">04</div>
+          <div>
+            <h3>모델 중립 아키텍처</h3>
+            <p>Claude, GPT, Gemini, LLaMA — 어떤 모델이든 동일한 SOUL.md로 동일한 "나"로 작동.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P21: 제품 라인업 ====== -->
+<div class="slide" data-i="20">
+  <div class="slide-inner center">
+    <div class="tag">Product Lineup</div>
+    <h2>제품 <span class="accent">라인업</span></h2>
+    <div class="products" style="max-width:960px;margin:28px auto 0">
       <div class="prod">
         <div class="prod-emoji">📦</div>
         <div class="prod-name">무펭이 박스</div>
-        <div class="prod-price">₩199만~</div>
-        <div class="prod-desc">Mac Mini 기반. 데이터 100% 로컬, 24/7 자율 운영.</div>
+        <div class="prod-desc">Mac Mini 기반 로컬 AI 디바이스. 데이터 외부 유출 0%, 24/7 자율 운영.</div>
         <ul class="prod-list">
-          <li>프로토콜 OS 사전 설치</li>
-          <li>Pro 라이센스 1년</li>
-          <li>초기 셋업 4시간</li>
+          <li>M4 칩 · 로컬 처리</li>
+          <li>무펭이 프로토콜 탑재</li>
+          <li>초기 셋업 포함</li>
+          <li>커스터마이징 자유</li>
         </ul>
       </div>
       <div class="prod">
         <div class="prod-emoji">☁️</div>
         <div class="prod-name">SaaS 대시보드</div>
-        <div class="prod-price">월 ₩4.9만~</div>
-        <div class="prod-desc">클라우드에서 바로. 실시간 모니터링 & 군단 관리.</div>
+        <div class="prod-desc">클라우드 기반 에이전트 관리. 실시간 모니터링 & 비용 추적.</div>
         <ul class="prod-list">
-          <li>실시간 모니터링</li>
+          <li>웹 대시보드</li>
+          <li>에이전트 모니터링</li>
           <li>비용 트래커</li>
           <li>Slack/Discord 연동</li>
         </ul>
       </div>
       <div class="prod">
         <div class="prod-emoji">🤝</div>
-        <div class="prod-name">컨설팅 & 구축</div>
-        <div class="prod-price">₩1,500만~</div>
-        <div class="prod-desc">조직 분석 → 설계 → 배포 → 교육. 올인원.</div>
+        <div class="prod-name">컨설팅</div>
+        <div class="prod-desc">조직 분석부터 배포까지 올인원 AI 자동화 구축 서비스.</div>
         <ul class="prod-list">
-          <li>맞춤형 SOUL.md 설계</li>
-          <li>에이전트 군단 구축</li>
+          <li>업무 프로세스 분석</li>
+          <li>맞춤 SOUL.md 설계</li>
+          <li>에이전트 구축 & 교육</li>
           <li>3개월 운영 지원</li>
         </ul>
       </div>
@@ -274,208 +774,340 @@ h3{font-size:1.2rem;font-weight:700;margin-bottom:6px}
   </div>
 </div>
 
-<!-- 7. MUPENGI -->
-<div class="slide" data-i="6">
+<!-- ====== P22: 실증 성과 ====== -->
+<div class="slide" data-i="21">
   <div class="slide-inner split">
     <div class="content">
-      <div class="tag">무펭이</div>
-      <h2>🐧 무펭이 —<br>프로토콜의 <span class="accent">증명</span></h2>
-      <p class="subtitle">24/7 자율 운영하는 살아있는 AI 에이전트. 기억하고, 판단하고, 성장한다.</p>
+      <div class="tag">Proven Results</div>
+      <h2>실증 <span class="accent">성과</span></h2>
+      <p class="subtitle">실제 운영 검증 완료된 수치</p>
+      <div class="stats" style="margin-top:28px">
+        <div class="stat"><div class="v">87건</div><div class="l">처리 작업</div></div>
+        <div class="stat"><div class="v">43%</div><div class="l">자율 실행</div></div>
+        <div class="stat"><div class="v">98%</div><div class="l">맥락 유지율</div></div>
+        <div class="stat"><div class="v">20+</div><div class="l">동시 에이전트</div></div>
+      </div>
       <div class="cards c2" style="margin-top:20px">
-        <div class="card" style="padding:18px"><div style="font-size:.72rem;color:var(--green);font-weight:700;margin-bottom:4px">자기 기억</div><p style="font-size:.82rem">맥락 유지율 98%. 모든 대화와 판단을 축적.</p></div>
-        <div class="card" style="padding:18px"><div style="font-size:.72rem;color:var(--green);font-weight:700;margin-bottom:4px">자기 판단</div><p style="font-size:.82rem">Spray & Prune. 뭘 만들지 스스로 판단.</p></div>
-        <div class="card" style="padding:18px"><div style="font-size:.72rem;color:var(--green);font-weight:700;margin-bottom:4px">자기 성장</div><p style="font-size:.82rem">Retain/Reflect 루프. 혼자 일기 쓰고 원칙 업데이트.</p></div>
-        <div class="card" style="padding:18px"><div style="font-size:.72rem;color:var(--green);font-weight:700;margin-bottom:4px">군단 운용</div><p style="font-size:.82rem">20+ 서브에이전트 동시 운용. ₩1,200에 87건.</p></div>
-      </div>
-    </div>
-    <div class="visual">
-      <div class="ph" style="min-height:400px">📸 무펭이 대시보드 스크린샷 추가 예정</div>
-    </div>
-  </div>
-</div>
-
-<!-- 8. TRACTION -->
-<div class="slide" data-i="7">
-  <div class="slide-inner" style="flex-direction:column;gap:16px">
-    <div>
-      <div class="tag">Traction</div>
-      <h2>7일간의 검증 — <span class="accent">이미 작동한다</span></h2>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="v">87</div><div class="l">처리 작업</div></div>
-      <div class="stat"><div class="v">43%</div><div class="l">자율 실행</div></div>
-      <div class="stat"><div class="v">98%</div><div class="l">맥락 유지율</div></div>
-      <div class="stat"><div class="v">₩1.2K</div><div class="l">총 비용 (7일)</div></div>
-      <div class="stat"><div class="v">20+</div><div class="l">동시 에이전트</div></div>
-    </div>
-    <div class="cards c2" style="margin-top:16px">
-      <div class="card">
-        <h3>🆚 기존 AI 대비</h3>
-        <div style="margin-top:10px;font-size:.85rem">
-          <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border)"><span style="color:var(--dim)">맥락 유지율</span><span><span style="color:var(--muted);text-decoration:line-through">12%</span> → <strong class="accent">98%</strong></span></div>
-          <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border)"><span style="color:var(--dim)">자율 실행</span><span><span style="color:var(--muted);text-decoration:line-through">0%</span> → <strong class="accent">43%</strong></span></div>
-          <div style="display:flex;justify-content:space-between;padding:6px 0"><span style="color:var(--dim)">기억 지속</span><span><span style="color:var(--muted);text-decoration:line-through">세션 한정</span> → <strong class="accent">영속</strong></span></div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>자율 판단</h3>
+          <p>지시하지 않은 업무를 스스로 판단하고 실행. 43%의 작업이 자율 처리.</p>
         </div>
-      </div>
-      <div class="card">
-        <h3>📋 실전 프로젝트</h3>
-        <div style="margin-top:10px;font-size:.85rem;color:var(--dim);line-height:2">
-          ✅ 50곳 대학 아웃리치 자동화<br>
-          ✅ SEO/AEO 전면 수정<br>
-          ✅ 크몽 서비스 8개 등록<br>
-          ✅ 카드뉴스 15장 제작<br>
-          ✅ 풀스택 코드 감사
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h3>맥락 유지</h3>
+          <p>일반 AI 맥락 유지율 12% 대비 98%. 8배 이상의 연속성.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 9. MARKET -->
-<div class="slide" data-i="8">
-  <div class="slide-inner" style="flex-direction:column;gap:16px">
-    <div>
-      <div class="tag">Market</div>
-      <h2>폭발하는 AI Agent 시장</h2>
+<!-- ====== P23: 활용 사례 ====== -->
+<div class="slide" data-i="22">
+  <div class="slide-inner center">
+    <div class="tag">Use Cases</div>
+    <h2>활용 <span class="accent">사례</span></h2>
+    <div class="cards c3" style="max-width:960px;margin:28px auto 0">
+      <div class="card">
+        <div class="card-icon">📺</div>
+        <h3>MBC충북 metadesk</h3>
+        <p>뉴스 모니터링 자동화<br>AI 에이전트가 실시간으로 뉴스를 수집·분류·리포트. 기자의 취재 효율 극대화.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌿</div>
+        <h3>포네이처스 힐림이</h3>
+        <p>고객 상담 AI 에이전트<br>자연 치유 전문 브랜드의 고객 문의 자동 응대 및 예약 관리.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🥟</div>
+        <h3>육거리소문난만두</h3>
+        <p>소상공인 AI 도입<br>주문 관리, 재고 파악, 고객 응대 자동화로 1인 운영 효율화.</p>
+      </div>
     </div>
-    <div class="bars" id="marketBars">
-      <div class="bar-row"><div class="bar-label">TAM</div><div class="bar-track"><div class="bar-fill bf-tam" data-w="100%"><span class="bv">$47B</span><span class="bd">전 세계 AI 에이전트 (2030)</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">SAM</div><div class="bar-track"><div class="bar-fill bf-sam" data-w="55%"><span class="bv">$12B</span><span class="bd">엔터프라이즈 AI Agent 플랫폼</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">SOM</div><div class="bar-track"><div class="bar-fill bf-som" data-w="25%"><span class="bv">$240M</span><span class="bd">무펭이 목표 (시장 2%)</span></div></div></div>
-    </div>
-    <div style="text-align:center;margin-top:24px">
-      <p style="color:var(--dim)">연평균 성장률 <strong style="color:var(--green);font-size:1.5rem">CAGR 45%</strong></p>
-    </div>
-    <div class="ph" style="max-width:600px;margin:16px auto 0;min-height:180px">📊 시장 성장 그래프 추가 예정</div>
   </div>
 </div>
 
-<!-- 10. TEAM -->
-<div class="slide" data-i="9">
-  <div class="slide-inner" style="flex-direction:column;gap:16px">
-    <div>
-      <div class="tag">Team</div>
-      <h2>인간 + AI <span class="accent">하이브리드 팀</span></h2>
+<!-- ====== P24: DIVIDER - WHY MUFI ====== -->
+<div class="slide divider-slide" data-i="23">
+  <div class="slide-inner center">
+    <div class="divider-num">05</div>
+    <div class="tag">Competitive Edge</div>
+    <h1>WHY <span class="accent">MUFI</span></h1>
+    <p class="subtitle" style="margin:0 auto">포토부스와 AI, 두 날개의 시너지</p>
+  </div>
+</div>
+
+<!-- ====== P25: 포토부스 경쟁력 ====== -->
+<div class="slide" data-i="24">
+  <div class="slide-inner split">
+    <div class="content">
+      <div class="tag">Photobooth Edge</div>
+      <h2>포토부스 <span class="accent">경쟁력</span></h2>
+      <div class="cards c2" style="margin-top:24px">
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <h3>전국 출장 · 24시간 대응</h3>
+          <p>서울부터 제주까지. 문의부터 설치까지 빠른 대응.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <h3>맞춤 프레임 디자인</h3>
+          <p>행사·브랜드별 커스텀 프레임. 실시간 변경 가능.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>데이터 기반 리포트</h3>
+          <p>촬영건수, 시간대 분석, 프레임 선택비율 등 행사 후 인사이트 제공.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏫</div>
+          <h3>검증된 트랙 레코드</h3>
+          <p>SKY 포함 22개 대학 + LG·도쿄일렉트론 등 기업. 500+ 행사 운영.</p>
+        </div>
+      </div>
     </div>
-    <div class="team-grid">
+  </div>
+</div>
+
+<!-- ====== P26: AI 경쟁력 ====== -->
+<div class="slide" data-i="25">
+  <div class="slide-inner split">
+    <div class="content">
+      <div class="tag">AI Edge</div>
+      <h2>AI <span class="accent">경쟁력</span></h2>
+      <div class="cards c2" style="margin-top:24px">
+        <div class="card">
+          <div class="card-icon">🏗️</div>
+          <h3>OS 레이어</h3>
+          <p>앱이 아닌 플랫폼. 모든 AI 모델 위에 올라가는 운영체제.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔗</div>
+          <h3>오프라인 + AI</h3>
+          <p>포토부스 데이터 경험 + AI 자동화. 유일한 포지션.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>로컬 우선 보안</h3>
+          <p>무펭이 박스 = 데이터 외부유출 0%. 민감 정보 로컬 처리.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3>오픈소스 생태계</h3>
+          <p>GitHub + npm 공개. 개발자 커뮤니티 기반 성장.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P27: 팀 소개 ====== -->
+<div class="slide" data-i="26">
+  <div class="slide-inner center">
+    <div class="tag">Team</div>
+    <h2>팀 <span class="accent">소개</span></h2>
+    <div class="team-grid" style="max-width:900px;margin:28px auto 0">
       <div class="team-card">
-        <div class="team-av"><span style="font-size:1rem;color:var(--muted)">📸</span></div>
-        <div class="team-name">정종현</div>
-        <div class="team-role">CEO & Co-Founder</div>
-        <div class="team-desc">MUFI 포토부스 창업 2년<br>한양대 청창사 14기<br>전략 · 영업 · 고객</div>
+        <div class="team-av">👨‍💼</div>
+        <div>
+          <div class="team-name">정종현</div>
+          <div class="team-role">CEO · Founder</div>
+          <div class="team-desc">
+            서원대 컴퓨터공학과<br>
+            MUFI 창업 · 4년차 운영<br>
+            충북청년창업사관학교 13기<br>
+            전략 · 영업 · 고객 개발
+          </div>
+        </div>
       </div>
       <div class="team-card">
         <div class="team-av">🐧</div>
-        <div class="team-name">무펭이</div>
-        <div class="team-role">AI Co-Founder</div>
-        <div class="team-desc">24/7 자율 운영<br>87건 처리 (7일)<br>20+ 에이전트 운용</div>
-      </div>
-      <div class="team-card">
-        <div class="team-av" style="border-style:dotted;opacity:.5"><span style="font-size:1.4rem">+</span></div>
-        <div class="team-name" style="color:var(--dim)">확장 계획</div>
-        <div class="team-role">2027~</div>
-        <div class="team-desc" style="color:var(--muted)">Y2: 인간 4 + AI 50<br>Y3: 인간 8 + AI 100<br>Y5: 인간 25 + AI 500</div>
+        <div>
+          <div class="team-name">무펭이</div>
+          <div class="team-role">AI CTO · 24/7 자율 운영</div>
+          <div class="team-desc">
+            무펭이 프로토콜 기반<br>
+            20+ 에이전트 동시 운용<br>
+            87건 자율 처리 · 98% 맥락 유지<br>
+            실행 · 자동화 · 프로토콜 검증
+          </div>
+        </div>
       </div>
     </div>
-    <div class="ph" style="max-width:700px;margin:16px auto 0;min-height:140px">📸 팀 활동 사진 추가 예정</div>
+    <p style="color:var(--dim);font-size:.85rem;margin-top:20px">인간 + AI 하이브리드 팀 — 전략은 사람이, 실행은 AI가</p>
   </div>
 </div>
 
-<!-- 11. VISION -->
-<div class="slide" data-i="10">
-  <div class="slide-inner center">
-    <div class="tag">Vision</div>
-    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);max-width:800px">"모든 팀에<br><span class="accent">영혼 있는 AI 에이전트</span>를"</h2>
-    <p style="color:var(--dim);font-size:1rem;margin-top:8px">An AI agent in every team, with a soul.</p>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar-icon">🌍</div>
-        <h3>AI의 민주화</h3>
-        <p>중소기업도 개인도 누구나 AI 팀을 가질 수 있는 세상.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">⚡</div>
-        <h3>일하는 방식의 혁명</h3>
-        <p>인간 3명 + AI 7명. 3배 빠르게, 1/3 비용.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🛡️</div>
-        <h3>AI 주권</h3>
-        <p>데이터는 로컬에. 모델은 선택 가능. 정체성은 우리가 정의.</p>
+<!-- ====== P28: 조직 구조 ====== -->
+<div class="slide" data-i="27">
+  <div class="slide-inner split">
+    <div class="content">
+      <div class="tag">Organization</div>
+      <h2>조직 <span class="accent">구조</span></h2>
+      <p class="subtitle">인간은 전략과 고객을, AI는 실행과 자동화를 담당하는<br>하이브리드 조직 구조</p>
+      <div class="cards c3" style="margin-top:28px">
+        <div class="card" style="text-align:center">
+          <div class="card-icon">📸</div>
+          <h3>포토부스팀</h3>
+          <p>행사 기획 · 운영<br>장비 관리 · 고객 응대</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="card-icon">🤖</div>
+          <h3>AI팀</h3>
+          <p>무펭이 프로토콜 개발<br>에이전트 구축 · SaaS 운영</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="card-icon">⚙️</div>
+          <h3>운영팀</h3>
+          <p>경영 관리 · 마케팅<br>파트너십 · 영업</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 12. CONTACT -->
-<div class="slide" data-i="11">
+<!-- ====== P29: 데이터 하이라이트 ====== -->
+<div class="slide" data-i="28">
   <div class="slide-inner center">
-    <div style="font-size:3.5rem">🐧</div>
-    <h2>함께 만들어갑시다</h2>
-    <p class="subtitle" style="margin:8px auto 0">AI 에이전트의 미래, MUFI와 함께하세요.</p>
-    <div class="contact-links">
-      <a href="mailto:jong@mupengyi.com" class="cl">✉️ jong@mupengyi.com</a>
-      <a href="https://instagram.com/jong_mufi" target="_blank" class="cl">📸 @jong_mufi</a>
-      <a href="https://mupengyi.com" target="_blank" class="cl">🌐 mupengyi.com</a>
+    <div class="tag">Data Highlights</div>
+    <h2>숫자로 보는 <span class="accent">MUFI</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:700px;margin:32px auto 0">
+      <div style="text-align:center">
+        <div class="big-num">100,000+</div>
+        <div class="label" style="font-size:.85rem;margin-top:8px">누적 이용자</div>
+      </div>
+      <div style="text-align:center">
+        <div class="big-num">500+</div>
+        <div class="label" style="font-size:.85rem;margin-top:8px">진행 행사</div>
+      </div>
+      <div style="text-align:center">
+        <div class="big-num">22</div>
+        <div class="label" style="font-size:.85rem;margin-top:8px">대학교 운영</div>
+      </div>
+      <div style="text-align:center">
+        <div class="big-num">4.9</div>
+        <div class="label" style="font-size:.85rem;margin-top:8px">평균 평점</div>
+      </div>
     </div>
-    <div class="ph" style="max-width:400px;min-height:160px;margin-top:36px">📸 브랜드 이미지 추가 예정</div>
-    <p style="margin-top:36px;color:var(--muted);font-size:.75rem">© 2026 MUFI. All rights reserved.</p>
+    <div style="display:flex;gap:16px;justify-content:center;margin-top:28px;flex-wrap:wrap">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 24px;text-align:center">
+        <div style="font-size:1.2rem;font-weight:900;color:var(--green)">98%</div>
+        <div style="font-size:.72rem;color:var(--dim);margin-top:2px">AI 맥락 유지율</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 24px;text-align:center">
+        <div style="font-size:1.2rem;font-weight:900;color:var(--green)">43%</div>
+        <div style="font-size:.72rem;color:var(--dim);margin-top:2px">AI 자율 실행률</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 24px;text-align:center">
+        <div style="font-size:1.2rem;font-weight:900;color:var(--green)">50+</div>
+        <div style="font-size:.72rem;color:var(--dim);margin-top:2px">파트너 기업</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 24px;text-align:center">
+        <div style="font-size:1.2rem;font-weight:900;color:var(--green)">6+</div>
+        <div style="font-size:.72rem;color:var(--dim);margin-top:2px">수상 이력</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P30: 연락처 ====== -->
+<div class="slide" data-i="29">
+  <div class="slide-inner center">
+    <div class="tag">Contact</div>
+    <h2>문의 & <span class="accent">연락처</span></h2>
+    <div class="contact-grid" style="max-width:800px;margin:28px auto 0">
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div class="contact-label">전화</div>
+        <div class="contact-value"><a href="tel:010-5547-0355">010-5547-0355</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-label">이메일</div>
+        <div class="contact-value"><a href="mailto:mufi@muinfilm.com">mufi@muinfilm.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-label">주소</div>
+        <div class="contact-value">청주시 흥덕구 봉명동 2143 102호</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📸</div>
+        <div class="contact-label">Instagram</div>
+        <div class="contact-value"><a href="https://instagram.com/team_mufi" target="_blank">@team_mufi</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">💬</div>
+        <div class="contact-label">카카오톡</div>
+        <div class="contact-value"><a href="https://pf.kakao.com/_aeFEG" target="_blank">카카오채널</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <div class="contact-label">웹사이트</div>
+        <div class="contact-value"><a href="https://rental.muinfilm.com" target="_blank">rental.muinfilm.com</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== P31: 엔딩 ====== -->
+<div class="slide" data-i="30">
+  <div class="slide-inner center">
+    <div style="font-size:3rem;margin-bottom:8px">📸 🐧</div>
+    <h1 style="font-size:clamp(2.5rem,5vw,4rem)"><span class="accent">MUFI</span></h1>
+    <h2 style="font-size:clamp(1.3rem,2.8vw,1.8rem);font-weight:600;margin-top:12px">순간을 연결하다,<br>기억을 만들다</h2>
+    <p style="color:var(--dim);font-size:.95rem;margin-top:20px">Thank you.</p>
+    <p style="color:var(--muted);font-size:.8rem;margin-top:32px">© 2026 MUFI. All rights reserved.</p>
   </div>
 </div>
 
 </div><!-- /deck -->
 
 <!-- NAV -->
-<nav class="nav" id="nav">
-  <span id="counter">1 / 12</span>
-  <button id="prevBtn" disabled aria-label="이전">‹</button>
-  <button id="nextBtn" aria-label="다음">›</button>
-</nav>
+<div class="nav">
+  <button id="prev" aria-label="이전">‹</button>
+  <span id="counter">1 / 31</span>
+  <button id="next" aria-label="다음">›</button>
+</div>
 <div class="progress" id="prog"></div>
 
 <script>
 const slides=document.querySelectorAll('.slide'),
-      total=slides.length;
+      total=slides.length,
+      counter=document.getElementById('counter'),
+      prog=document.getElementById('prog'),
+      prevBtn=document.getElementById('prev'),
+      nextBtn=document.getElementById('next');
 let cur=0;
-
-const counter=document.getElementById('counter'),
-      prev=document.getElementById('prevBtn'),
-      next=document.getElementById('nextBtn'),
-      prog=document.getElementById('prog');
 
 function go(n){
   if(n<0||n>=total)return;
   slides[cur].classList.remove('active');
   slides[cur].classList.add(n>cur?'prev':'');
-  slides[cur].className='slide'+(n>cur?' prev':'');
   cur=n;
-  slides[cur].classList.add('active');
+  slides.forEach((s,i)=>{
+    s.classList.remove('active','prev');
+    if(i===cur)s.classList.add('active');
+    else if(i<cur)s.classList.add('prev');
+  });
   counter.textContent=`${cur+1} / ${total}`;
-  prev.disabled=cur===0;
-  next.disabled=cur===total-1;
-  prog.style.width=((cur+1)/total*100)+'%';
-  // animate market bars
-  if(cur===8){
-    document.querySelectorAll('.bar-fill').forEach(b=>{b.style.width=b.dataset.w});
-  }
+  prog.style.width=`${((cur+1)/total)*100}%`;
+  prevBtn.disabled=cur===0;
+  nextBtn.disabled=cur===total-1;
 }
-
-prev.onclick=()=>go(cur-1);
-next.onclick=()=>go(cur+1);
-
+prevBtn.onclick=()=>go(cur-1);
+nextBtn.onclick=()=>go(cur+1);
 document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){e.preventDefault();go(cur+1)}
-  if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();go(cur-1)}
+  if(e.key==='ArrowRight'||e.key===' ')go(cur+1);
+  if(e.key==='ArrowLeft')go(cur-1);
 });
-
-// swipe
-let sx=0;
-document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX});
+let tx=0;
+document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
 document.addEventListener('touchend',e=>{
-  const dx=e.changedTouches[0].clientX-sx;
+  const dx=e.changedTouches[0].clientX-tx;
   if(Math.abs(dx)>50){dx<0?go(cur+1):go(cur-1)}
-});
-
+},{passive:true});
 go(0);
 </script>
 </body>

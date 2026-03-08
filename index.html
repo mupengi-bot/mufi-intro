@@ -26,6 +26,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
   opacity:0;transform:translateX(60px);
   transition:opacity .5s ease,transform .5s ease;
   pointer-events:none;
+  overflow-y:auto;
 }
 .slide.active{opacity:1;transform:translateX(0);pointer-events:auto;z-index:2}
 .slide.prev{opacity:0;transform:translateX(-60px)}
